@@ -1,7 +1,7 @@
-object Main extends Test with App {
-    println(test)
-}
+import scala.io.StdIn.readLine
 
-trait Test {
-  lazy val test: String = "This working?"
+object Main extends App {
+  val userInput = getUserInput(readLine())
+
+  def getUserInput(s: String): String = s
 }
