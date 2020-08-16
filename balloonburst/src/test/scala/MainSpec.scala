@@ -36,4 +36,9 @@ class MainSpec extends AnyFlatSpec with Matchers {
     val in = "1 2 3 4"
     Main.matchUserInput(Main.isAllIntegers, in) shouldEqual Array(1, 2, 3, 4)
   }
+
+  "matchUserString" should "return a warning if a passed string is not 'BANK' or 'INFLATE'" in {
+    val in = "BALLMER"
+    Main.matchUserString(in) shouldEqual "This is not a valid input"
+  }
 }
